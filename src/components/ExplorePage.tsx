@@ -33,7 +33,7 @@ const Explore = () => {
         description:
           "Practice slow blinking. It's a cat's way of saying 'I love you' and signals trust to your nervous system.",
         icon: <Heart className="h-6 w-6" />,
-        color: 'bg-pink-100',
+        color: 'bg-stone-200',
       },
       {
         id: 'tip-3',
@@ -49,7 +49,7 @@ const Explore = () => {
         description:
           'Find your cozy corner. A comfortable space makes meditation easier and more enjoyable.',
         icon: <Lightbulb className="h-6 w-6" />,
-        color: 'bg-blue-100',
+        color: 'bg-yellow-100',
       },
       {
         id: 'tip-5',
@@ -65,7 +65,7 @@ const Explore = () => {
         description:
           "Start each session by noting 3 things you're grateful for. This shifts your mind toward positivity.",
         icon: <Heart className="h-6 w-6" />,
-        color: 'bg-fuchsia-100',
+        color: 'bg-orange-100',
       },
       {
         id: 'tip-7',
@@ -81,7 +81,7 @@ const Explore = () => {
         description:
           'Build a routine. Meditating at the same time helps train your mind and body to relax faster.',
         icon: <Lightbulb className="h-6 w-6" />,
-        color: 'bg-sky-100',
+        color: 'bg-lime-100',
       },
     ],
     breathing: [
@@ -91,7 +91,7 @@ const Explore = () => {
         description:
           'Inhale for 4, hold for 4, exhale for 4, hold for 4. The perfect cat-like rhythm.',
         icon: <Wind className="h-6 w-6" />,
-        color: 'bg-cyan-100',
+        color: 'bg-stone-100',
       },
       {
         id: 'breath-2',
@@ -99,7 +99,7 @@ const Explore = () => {
         description:
           "Exhale with a soft humming sound, like a cat's purr. Feel the vibrations calm your nerves.",
         icon: <Heart className="h-6 w-6" />,
-        color: 'bg-purple-100',
+        color: 'bg-yellow-200',
       },
       {
         id: 'breath-3',
@@ -107,7 +107,7 @@ const Explore = () => {
         description:
           'Equal parts: inhale, hold, exhale, pause. Simple yet powerful for instant calm.',
         icon: <Sparkles className="h-6 w-6" />,
-        color: 'bg-rose-100',
+        color: 'bg-orange-200',
       },
       {
         id: 'breath-4',
@@ -123,7 +123,7 @@ const Explore = () => {
         description:
           'Nadi Shodhana: Balance your nervous system by breathing through alternating nostrils.',
         icon: <Wind className="h-6 w-6" />,
-        color: 'bg-violet-100',
+        color: 'bg-emerald-100',
       },
       {
         id: 'breath-6',
@@ -131,7 +131,7 @@ const Explore = () => {
         description:
           'Place your hand on your belly. Feel it rise and fall with each breath. This activates calm.',
         icon: <Heart className="h-6 w-6" />,
-        color: 'bg-pink-100',
+        color: 'bg-stone-200',
       },
       {
         id: 'breath-7',
@@ -157,7 +157,7 @@ const Explore = () => {
         description:
           'Like a cat in the moment, I let go of past worries and future fears.',
         icon: <Heart className="h-6 w-6" />,
-        color: 'bg-red-100',
+        color: 'bg-amber-200',
       },
       {
         id: 'aff-2',
@@ -173,7 +173,7 @@ const Explore = () => {
         description:
           "Napping is not laziness, it's wisdom. I honor my body's needs.",
         icon: <Lightbulb className="h-6 w-6" />,
-        color: 'bg-indigo-100',
+        color: 'bg-stone-200',
       },
       {
         id: 'aff-4',
@@ -188,7 +188,7 @@ const Explore = () => {
         title: 'My mind is clear and peaceful',
         description: 'I let go of stress and embrace serenity in every breath.',
         icon: <Heart className="h-6 w-6" />,
-        color: 'bg-rose-100',
+        color: 'bg-orange-200',
       },
       {
         id: 'aff-6',
@@ -196,7 +196,7 @@ const Explore = () => {
         description:
           'I treat myself with the same compassion I give to others.',
         icon: <Sparkles className="h-6 w-6" />,
-        color: 'bg-pink-100',
+        color: 'bg-stone-200',
       },
       {
         id: 'aff-7',
@@ -204,7 +204,7 @@ const Explore = () => {
         description:
           'Like a cat, I land gracefully on my feet through any situation.',
         icon: <Lightbulb className="h-6 w-6" />,
-        color: 'bg-cyan-100',
+        color: 'bg-stone-100',
       },
       {
         id: 'aff-8',

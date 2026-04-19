@@ -51,9 +51,9 @@ const Navigation = () => {
         href="/"
         className="text-primary flex items-center gap-3 transition-opacity hover:opacity-80"
       >
-        <PawPrint className="h-8 w-8" />
+        <img src="/images/logo.jpeg" alt="Logo" className="h-20 w-20 " />
         <span className="font-heading text-foreground text-2xl font-bold">
-          Purrfectly Zen
+          EquiPaws
         </span>
       </a>
 
@@ -223,14 +223,14 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             {[
-              { icon: Star, label: '5 Rated', color: 'text-yellow-600' },
-              { icon: Lock, label: '100% Free', color: 'text-green-600' },
+              { icon: Star, label: '5 Rated', color: 'text-amber-600' },
+              { icon: Lock, label: '100% Free', color: 'text-yellow-700' },
               {
                 icon: CheckCircle,
                 label: 'Science-Backed',
-                color: 'text-purple-600',
+                color: 'text-amber-800',
               },
-              { icon: Heart, label: 'Community Loved', color: 'text-red-600' },
+              { icon: Heart, label: 'Community Loved', color: 'text-amber-700' },
             ].map((badge, idx) => (
               <motion.div
                 key={idx}
@@ -270,7 +270,7 @@ const Hero = () => {
             transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
             className="bg-card absolute -bottom-8 -left-4 flex max-w-[200px] items-center gap-3 rounded-2xl p-4 shadow-lg md:left-10"
           >
-            <div className="rounded-full bg-green-100 p-2 text-green-600">
+            <div className="rounded-full bg-amber-100 p-2 text-amber-700">
               <Sparkles size={20} />
             </div>
             <div>
@@ -290,7 +290,7 @@ const Hero = () => {
             }}
             className="bg-card absolute -top-4 -right-4 flex max-w-[200px] items-center gap-3 rounded-2xl p-4 shadow-lg md:-right-8"
           >
-            <div className="rounded-full bg-blue-100 p-2 text-blue-600">
+            <div className="rounded-full bg-yellow-100 p-2 text-yellow-700">
               <Users size={20} />
             </div>
             <div>
@@ -350,7 +350,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="relative bg-white/50 px-6 py-24 md:px-12 lg:px-24"
+      className="relative bg-background/50 px-6 py-24 md:px-12 lg:px-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 space-y-4 text-center">
@@ -641,7 +641,7 @@ export const Footer = () => {
             reserved.
           </p>
           <p className="flex items-center justify-center gap-1">
-            Built with <Heart className="h-3 w-3 text-red-400" /> for cat lovers
+            Built with <Heart className="h-3 w-3 text-amber-600" /> for animal lovers
           </p>
         </motion.div>
       </div>
