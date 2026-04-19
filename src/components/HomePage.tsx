@@ -51,7 +51,7 @@ const Navigation = () => {
         href="/"
         className="text-primary flex items-center gap-3 transition-opacity hover:opacity-80"
       >
-        <img src="/images/logo.jpeg" alt="Logo" className="h-20 w-20 " />
+        <img src="/images/logo.png" alt="Logo" className="h-20 w-20" />
         <span className="font-heading text-foreground text-2xl font-bold">
           EquiPaws
         </span>
@@ -178,8 +178,9 @@ const Hero = () => {
       className="relative flex min-h-[90vh] flex-col items-center overflow-hidden px-6 py-12 md:flex-row md:px-12 lg:px-24"
     >
       {/* Decorative Blobs */}
-      <div className="bg-primary/10 absolute top-[-10%] left-[-10%] -z-10 h-[500px] w-[500px] rounded-full blur-3xl" />
-      <div className="bg-accent/30 absolute right-[-5%] bottom-[10%] -z-10 h-[400px] w-[400px] rounded-full blur-3xl" />
+      <div className="bg-primary/20 absolute top-[-10%] left-[-10%] -z-10 h-[500px] w-[500px] rounded-full blur-3xl" />
+      <div className="bg-accent/40 absolute right-[-5%] bottom-[10%] -z-10 h-[400px] w-[400px] rounded-full blur-3xl" />
+      <div className="absolute top-[30%] right-[20%] -z-10 h-[300px] w-[300px] rounded-full bg-[#8f8b00]/10 blur-3xl" />
 
       <div className="relative z-10 w-full space-y-8 md:w-1/2">
         <motion.div
@@ -350,8 +351,11 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="relative bg-background/50 px-6 py-24 md:px-12 lg:px-24"
+      className="relative px-6 py-24 md:px-12 lg:px-24"
     >
+      {/* Decorative color blobs */}
+      <div className="absolute top-10 left-[10%] -z-10 h-[350px] w-[350px] rounded-full bg-amber-400/15 blur-3xl" />
+      <div className="absolute right-[5%] bottom-20 -z-10 h-[250px] w-[250px] rounded-full bg-[#8f8b00]/15 blur-3xl" />
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 space-y-4 text-center">
           <span className="font-hand text-primary text-xl">
@@ -417,6 +421,9 @@ const Community = () => {
 
   return (
     <section id="community" className="relative px-6 py-24 md:px-12 lg:px-24">
+      {/* Decorative color blobs */}
+      <div className="absolute top-[20%] left-[-5%] -z-10 h-[300px] w-[300px] rounded-full bg-orange-400/15 blur-3xl" />
+      <div className="absolute right-[10%] bottom-[10%] -z-10 h-[250px] w-[250px] rounded-full bg-[#8f8b00]/12 blur-3xl" />
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 space-y-4 text-center">
           <span className="font-hand text-primary text-xl">
@@ -470,8 +477,10 @@ const QuoteSection = () => {
   return (
     <section
       id="wisdom"
-      className="bg-secondary/20 flex items-center justify-center px-6 py-24 text-center"
+      className="relative flex items-center justify-center px-6 py-24 text-center"
     >
+      {/* Warm gradient overlay */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-500/10 via-[#8f8b00]/8 to-orange-600/10" />
       <motion.div
         className="relative max-w-3xl"
         initial={{ opacity: 0, y: 20 }}
@@ -651,13 +660,16 @@ export const Footer = () => {
 
 export default function Home() {
   return (
-    <div className="bg-background selection:bg-primary/20 selection:text-primary-foreground min-h-screen">
+    <div className="selection:bg-primary/20 selection:text-primary-foreground relative min-h-screen">
       <Navigation />
       <Hero />
       <Features />
       <Community />
       <QuoteSection />
-      <section id="cta" className="px-6 py-24">
+      <section id="cta" className="relative px-6 py-24">
+        {/* Decorative blobs */}
+        <div className="absolute top-[10%] left-[15%] -z-10 h-[300px] w-[300px] rounded-full bg-yellow-400/15 blur-3xl" />
+        <div className="absolute right-[10%] bottom-[20%] -z-10 h-[250px] w-[250px] rounded-full bg-amber-600/10 blur-3xl" />
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

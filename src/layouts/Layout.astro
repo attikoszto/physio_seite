@@ -97,32 +97,32 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
   }
 
   :root {
-    --background: 38 40% 96%;
+    --background: 35 45% 94%;
     --foreground: 24 45% 18%;
 
     --primary: 41 73% 57%;
     --primary-foreground: 24 80% 10%;
 
-    --secondary: 62 30% 85%;
-    --secondary-foreground: 62 50% 20%;
+    --secondary: 64 40% 82%;
+    --secondary-foreground: 64 80% 20%;
 
-    --card: 38 30% 99%;
+    --card: 36 35% 97%;
     --card-foreground: 24 45% 18%;
 
-    --popover: 38 30% 99%;
+    --popover: 36 35% 97%;
     --popover-foreground: 24 45% 18%;
 
-    --muted: 38 25% 90%;
+    --muted: 35 28% 88%;
     --muted-foreground: 24 20% 42%;
 
-    --accent: 34 50% 88%;
+    --accent: 34 55% 85%;
     --accent-foreground: 34 70% 22%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 38 28% 87%;
-    --input: 38 28% 87%;
+    --border: 35 30% 84%;
+    --input: 35 30% 84%;
     --ring: 41 73% 57%;
 
     --radius: 1rem;
@@ -138,7 +138,16 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
     }
 
     body {
-      @apply bg-background text-foreground font-sans antialiased;
+      @apply text-foreground font-sans antialiased;
+      background: linear-gradient(
+        180deg,
+        hsl(35 45% 94%) 0%,
+        hsl(34 40% 91%) 25%,
+        hsl(33 38% 87%) 50%,
+        hsl(30 35% 83%) 75%,
+        hsl(28 32% 78%) 100%
+      );
+      background-attachment: fixed;
     }
 
     h1,
