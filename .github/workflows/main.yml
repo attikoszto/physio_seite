@@ -31,7 +31,7 @@ jobs:
         with:
           host: ${{ secrets.SFTP_HOST }}
           port: 22
-          user: ${{ secrets.SFTP_USERNAME }}
+          user: ${{ secrets.SFTP_NAME }}
           pass: ${{ secrets.SFTP_PASSWORD }}
           onlyNewer: true
           settings: 'sftp:auto-confirm yes'
