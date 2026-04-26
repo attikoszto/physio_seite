@@ -21,9 +21,9 @@ jobs:
           cache: npm
       - name: Check required secrets
         run: |
-          if [ -z "${{ secrets.IONOS_SFTP_HOST }}" ]; then echo "IONOS_SFTP_HOST is missing"; exit 1; fi
-          if [ -z "${{ secrets.IONOS_SFTP_USER }}" ]; then echo "IONOS_SFTP_USER is missing"; exit 1; fi
-          if [ -z "${{ secrets.IONOS_SFTP_PASSWORD }}" ]; then echo "IONOS_SFTP_PASSWORD is missing"; exit 1; fi
+          if [ -z "${{ secrets.SFTP_HOST }}" ]; then echo "SFTP_HOST is missing"; exit 1; fi
+          if [ -z "${{ secrets.SFTP_USER }}" ]; then echo "SFTP_USER is missing"; exit 1; fi
+          if [ -z "${{ secrets.SFTP_PASSWORD }}" ]; then echo "SFTP_PASSWORD is missing"; exit 1; fi
           echo "Secrets are set"
     
       - name: Install
