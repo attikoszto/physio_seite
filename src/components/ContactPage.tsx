@@ -49,7 +49,7 @@ export default function Contact() {
         >
           <div className="space-y-4 text-center">
             <Mail className="text-primary mx-auto h-12 w-12" />
-            <h1 className="font-heading text-foreground text-4xl font-bold md:text-5xl">
+            <h1 className="text-foreground text-4xl font-bold md:text-5xl">
               Get in Touch
             </h1>
             <p className="text-muted-foreground text-lg">
@@ -125,7 +125,7 @@ export default function Contact() {
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
                     <Heart className="h-8 w-8 fill-current text-green-600" />
                   </div>
-                  <h2 className="font-heading text-foreground text-2xl font-bold">
+                  <h2 className="text-foreground text-2xl font-bold">
                     Thank you!
                   </h2>
                   <p className="text-muted-foreground">

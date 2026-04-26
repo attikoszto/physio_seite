@@ -83,7 +83,7 @@ const Join = () => {
                         <PawPrint className="text-primary h-10 w-10" />
                       </div>
                     </div>
-                    <h1 className="font-heading text-foreground text-4xl font-bold md:text-5xl">
+                    <h1 className="text-foreground text-4xl font-bold md:text-5xl">
                       Join the Clowder
                     </h1>
                     <p className="text-muted-foreground mx-auto max-w-md text-lg leading-relaxed">
@@ -228,7 +228,7 @@ const Join = () => {
                     </motion.div>
 
                     <div className="space-y-2">
-                      <h2 className="font-heading text-foreground text-3xl font-bold">
+                      <h2 className="text-foreground text-3xl font-bold">
                         Welcome to the Clowder!
                       </h2>
                       <p className="text-muted-foreground text-lg">

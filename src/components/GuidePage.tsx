@@ -58,7 +58,7 @@ const Guide = () => {
             </button>
           </a>
           <div>
-            <h1 className="font-heading text-foreground text-4xl font-bold">
+            <h1 className="text-foreground text-4xl font-bold">
               Beginner's Guide
             </h1>
             <p className="text-muted-foreground">
@@ -85,7 +85,7 @@ const Guide = () => {
                       {step.icon}
                     </div>
                     <div>
-                      <h2 className="font-heading text-foreground text-2xl font-bold">
+                      <h2 className="text-foreground text-2xl font-bold">
                         {step.title}
                       </h2>
                       <p className="text-muted-foreground text-sm">
@@ -123,7 +123,7 @@ const Guide = () => {
           viewport={{ once: true }}
           className="bg-primary/10 mt-12 rounded-2xl p-8 text-center"
         >
-          <h2 className="font-heading text-foreground mb-3 text-2xl font-bold">
+          <h2 className="text-foreground mb-3 text-2xl font-bold">
             Ready to begin? 🐱
           </h2>
           <p className="text-muted-foreground mb-6">

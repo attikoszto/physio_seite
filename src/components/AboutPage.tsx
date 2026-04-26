@@ -28,7 +28,7 @@ export default function About() {
         >
           <div className="space-y-4 text-center">
             <PawPrint className="text-primary mx-auto h-12 w-12" />
-            <h1 className="font-heading text-foreground text-4xl font-bold md:text-5xl">
+            <h1 className="text-foreground text-4xl font-bold md:text-5xl">
               About Purrfectly Zen
             </h1>
           </div>
@@ -36,7 +36,7 @@ export default function About() {
           <div className="bg-card rounded-[2rem] border-none shadow-lg">
             <div className="space-y-6 p-8 md:p-12">
               <div className="space-y-4">
-                <h2 className="font-heading text-foreground text-2xl font-bold">
+                <h2 className="text-foreground text-2xl font-bold">
                   Our Mission
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -47,7 +47,7 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <h2 className="font-heading text-foreground text-2xl font-bold">
+                <h2 className="text-foreground text-2xl font-bold">
                   Why Cats?
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -60,7 +60,7 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <h2 className="font-heading text-foreground text-2xl font-bold">
+                <h2 className="text-foreground text-2xl font-bold">
                   About Our Name
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -78,7 +78,7 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <h2 className="font-heading text-foreground text-2xl font-bold">
+                <h2 className="text-foreground text-2xl font-bold">
                   What We Offer
                 </h2>
                 <ul className="space-y-3">

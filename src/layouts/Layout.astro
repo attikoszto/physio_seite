@@ -1,4 +1,6 @@
 ---
+import crypto from 'node:crypto';
+
 interface Props {
   title?: string;
   description?: string;
@@ -7,7 +9,7 @@ interface Props {
 }
 
 const {
-  title = 'Purrfectly Zen - Cat-Inspired Meditation & Mindfulness',
+  title = 'EquiPaws',
   description = 'Find your zen with cat-inspired meditation. Guided breathing exercises, mindfulness sessions, and feline wisdom to help you relax.',
   canonicalPath = '',
   noindex = false,
@@ -15,6 +17,9 @@ const {
 
 const siteUrl = Astro.site?.href || '';
 const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
+
+const sitePassword = import.meta.env.SITE_PASSWORD || 'changeme';
+const passwordHash = crypto.createHash('sha256').update(sitePassword).digest('hex');
 ---
 
 <!doctype html>
@@ -56,7 +61,65 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
     />
   </head>
   <body>
-    <slot />
+    <div id="auth-overlay">
+      <div class="auth-card">
+        <div class="auth-icon">🔒</div>
+        <h1 class="auth-title">Zugang geschützt</h1>
+        <p class="auth-subtitle">Bitte Passwort eingeben</p>
+        <form id="auth-form">
+          <input
+            type="password"
+            id="auth-password"
+            placeholder="Passwort"
+            autocomplete="current-password"
+            required
+          />
+          <button type="submit">Anmelden</button>
+          <p id="auth-error" class="auth-error" style="display:none;">
+            Falsches Passwort
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div id="main-content" style="display:none;">
+      <slot />
+    </div>
+
+    <script define:vars={{ passwordHash }}>
+      (async function () {
+        const AUTH_KEY = 'site_auth';
+
+        async function sha256(message) {
+          const data = new TextEncoder().encode(message);
+          const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        if (sessionStorage.getItem(AUTH_KEY) === passwordHash) {
+          document.getElementById('auth-overlay').style.display = 'none';
+          document.getElementById('main-content').style.display = 'block';
+        }
+
+        document
+          .getElementById('auth-form')
+          .addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const input = document.getElementById('auth-password');
+            const hash = await sha256(input.value);
+            if (hash === passwordHash) {
+              sessionStorage.setItem(AUTH_KEY, passwordHash);
+              document.getElementById('auth-overlay').style.display = 'none';
+              document.getElementById('main-content').style.display = 'block';
+            } else {
+              document.getElementById('auth-error').style.display = 'block';
+              input.value = '';
+              input.focus();
+            }
+          });
+      })();
+    </script>
   </body>
 </html>
 
@@ -156,7 +219,7 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
     h4,
     h5,
     h6 {
-      @apply font-heading font-semibold tracking-tight;
+      @apply font-sans font-semibold tracking-tight;
     }
   }
 
@@ -186,5 +249,96 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
 
   .font-hand {
     font-family: var(--font-hand);
+  }
+
+  #auth-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      180deg,
+      hsl(35 45% 94%) 0%,
+      hsl(34 40% 91%) 50%,
+      hsl(30 35% 83%) 100%
+    );
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .auth-card {
+    background: hsl(36 35% 97%);
+    border: 1px solid hsl(35 30% 84%);
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    max-width: 380px;
+    width: 90%;
+  }
+
+  .auth-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .auth-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: hsl(24 45% 18%);
+    margin: 0 0 0.25rem;
+  }
+
+  .auth-subtitle {
+    color: hsl(24 20% 42%);
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+  }
+
+  #auth-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid hsl(35 30% 84%);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    background: hsl(35 45% 94%);
+    color: hsl(24 45% 18%);
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+  }
+
+  #auth-form input:focus {
+    border-color: hsl(41 73% 57%);
+    box-shadow: 0 0 0 3px hsla(41, 73%, 57%, 0.2);
+  }
+
+  #auth-form button {
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: hsl(41 73% 57%);
+    color: hsl(24 80% 10%);
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  #auth-form button:hover {
+    opacity: 0.9;
+  }
+
+  .auth-error {
+    color: hsl(0 84% 60%);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
   }
 </style>

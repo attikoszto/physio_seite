@@ -71,7 +71,7 @@ const FAQ = () => {
             </button>
           </a>
           <div>
-            <h1 className="font-heading text-foreground text-4xl font-bold">
+            <h1 className="text-foreground text-4xl font-bold">
               FAQ
             </h1>
             <p className="text-muted-foreground">
@@ -99,7 +99,7 @@ const FAQ = () => {
                   className="bg-card hover:bg-card/80 w-full p-6 text-left transition-colors"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-heading text-foreground text-lg font-bold">
+                    <h3 className="text-foreground text-lg font-bold">
                       {faq.question}
                     </h3>
                     <motion.div

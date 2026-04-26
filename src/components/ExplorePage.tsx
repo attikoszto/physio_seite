@@ -250,7 +250,7 @@ const Explore = () => {
             </button>
           </a>
           <div>
-            <h1 className="font-heading text-foreground text-4xl font-bold">
+            <h1 className="text-foreground text-4xl font-bold">
               Explore Zen
             </h1>
             <p className="text-muted-foreground">
@@ -287,7 +287,7 @@ const Explore = () => {
                         <div className="bg-primary/10 group-hover:bg-primary/20 text-primary flex h-16 w-16 items-center justify-center rounded-full transition-colors">
                           {categoryLabels[category].icon}
                         </div>
-                        <h3 className="font-heading text-foreground text-2xl font-bold">
+                        <h3 className="text-foreground text-2xl font-bold">
                           {categoryLabels[category].name}
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -324,7 +324,7 @@ const Explore = () => {
 
               {/* Header */}
               <div>
-                <h2 className="font-heading text-foreground mb-2 text-3xl font-bold">
+                <h2 className="text-foreground mb-2 text-3xl font-bold">
                   {categoryLabels[selectedCategory].name}
                 </h2>
                 <p className="text-muted-foreground">
@@ -358,7 +358,7 @@ const Explore = () => {
                             {item.icon}
                           </div>
                           <div>
-                            <h3 className="font-heading text-foreground mb-2 text-xl font-bold">
+                            <h3 className="text-foreground mb-2 text-xl font-bold">
                               {item.title}
                             </h3>
                             <p className="text-muted-foreground leading-relaxed">

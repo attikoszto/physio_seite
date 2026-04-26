@@ -27,7 +27,7 @@ export default function Privacy() {
           className="space-y-8"
         >
           <div>
-            <h1 className="font-heading text-foreground mb-4 text-4xl font-bold md:text-5xl">
+            <h1 className="text-foreground mb-4 text-4xl font-bold md:text-5xl">
               Privacy Policy
             </h1>
           </div>
@@ -35,7 +35,7 @@ export default function Privacy() {
           <div className="bg-card rounded-[2rem] border-none shadow-lg">
             <div className="space-y-6 p-8 md:p-12">
               <div className="space-y-3">
-                <h2 className="font-heading text-foreground text-xl font-bold">
+                <h2 className="text-foreground text-xl font-bold">
                   Data We Collect
                 </h2>
                 <p className="text-muted-foreground">
@@ -47,7 +47,7 @@ export default function Privacy() {
               </div>
 
               <div className="space-y-3">
-                <h2 className="font-heading text-foreground text-xl font-bold">
+                <h2 className="text-foreground text-xl font-bold">
                   How We Use Your Data
                 </h2>
                 <p className="text-muted-foreground">
@@ -58,7 +58,7 @@ export default function Privacy() {
               </div>
 
               <div className="space-y-3">
-                <h2 className="font-heading text-foreground text-xl font-bold">
+                <h2 className="text-foreground text-xl font-bold">
                   Session Data
                 </h2>
                 <p className="text-muted-foreground">
@@ -69,7 +69,7 @@ export default function Privacy() {
               </div>
 
               <div className="space-y-3">
-                <h2 className="font-heading text-foreground text-xl font-bold">
+                <h2 className="text-foreground text-xl font-bold">
                   Security
                 </h2>
                 <p className="text-muted-foreground">
@@ -80,7 +80,7 @@ export default function Privacy() {
               </div>
 
               <div className="space-y-3">
-                <h2 className="font-heading text-foreground text-xl font-bold">
+                <h2 className="text-foreground text-xl font-bold">
                   Contact Us
                 </h2>
                 <p className="text-muted-foreground">

@@ -52,7 +52,7 @@ const Navigation = () => {
         className="text-primary flex items-center gap-3 transition-opacity hover:opacity-80"
       >
         <img src="/images/logo.png" alt="Logo" className="h-20 w-20" />
-        <span className="font-heading text-foreground text-2xl font-bold">
+        <span className="text-foreground text-2xl font-bold">
           EquiPaws
         </span>
       </a>
@@ -85,7 +85,7 @@ const Navigation = () => {
         <a href="/join">
           <button
             data-testid="button-join-nav"
-            className="font-heading bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 py-2 font-bold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 py-2 font-bold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
           >
             Join the Clowder
           </button>
@@ -157,7 +157,7 @@ const Navigation = () => {
                 >
                   <button
                     data-testid="button-join-mobile"
-                    className="font-heading bg-primary text-primary-foreground hover:bg-primary/90 w-full rounded-full py-4 font-medium shadow-lg transition-all hover:shadow-xl"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 w-full rounded-full py-4 font-medium shadow-lg transition-all hover:shadow-xl"
                   >
                     Join the Clowder
                   </button>
@@ -180,7 +180,6 @@ const Hero = () => {
       {/* Decorative Blobs */}
       <div className="bg-primary/20 absolute top-[-10%] left-[-10%] -z-10 h-[500px] w-[500px] rounded-full blur-3xl" />
       <div className="bg-accent/40 absolute right-[-5%] bottom-[10%] -z-10 h-[400px] w-[400px] rounded-full blur-3xl" />
-      <div className="absolute top-[30%] right-[20%] -z-10 h-[300px] w-[300px] rounded-full bg-[#8f8b00]/10 blur-3xl" />
 
       <div className="relative z-10 w-full space-y-8 md:w-1/2">
         <motion.div
@@ -188,10 +187,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="font-hand text-primary mb-4 inline-block -rotate-2 text-2xl">
+          <span className="text-primary mb-4 inline-block -rotate-2 text-2xl">
             Welcome home, human!
           </span>
-          <h1 className="font-heading text-foreground mb-6 text-5xl leading-[1.1] font-bold md:text-7xl">
+          <h1 className="text-foreground mb-6 text-5xl leading-[1.1] font-bold md:text-7xl">
             Let's find your inner{' '}
             <span className="text-primary relative inline-block">
               Zen
@@ -337,7 +336,7 @@ const FeatureCard = ({
           />
         </div>
         <div className="flex flex-1 flex-col items-center p-8 text-center">
-          <h3 className="font-heading text-foreground mb-3 text-2xl font-bold">
+          <h3 className="text-foreground mb-3 text-2xl font-bold">
             {title}
           </h3>
           <p className="text-muted-foreground leading-relaxed">{desc}</p>
@@ -355,13 +354,12 @@ const Features = () => {
     >
       {/* Decorative color blobs */}
       <div className="absolute top-10 left-[10%] -z-10 h-[350px] w-[350px] rounded-full bg-amber-400/15 blur-3xl" />
-      <div className="absolute right-[5%] bottom-20 -z-10 h-[250px] w-[250px] rounded-full bg-[#8f8b00]/15 blur-3xl" />
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 space-y-4 text-center">
-          <span className="font-hand text-primary text-xl">
+          <span className="text-[#8f8b00] text-xl">
             Why cats are gurus
           </span>
-          <h2 className="font-heading text-foreground text-4xl font-bold md:text-5xl">
+          <h2 className="text-foreground text-4xl font-bold md:text-5xl">
             The Way of the Meow
           </h2>
         </div>
@@ -423,13 +421,12 @@ const Community = () => {
     <section id="community" className="relative px-6 py-24 md:px-12 lg:px-24">
       {/* Decorative color blobs */}
       <div className="absolute top-[20%] left-[-5%] -z-10 h-[300px] w-[300px] rounded-full bg-orange-400/15 blur-3xl" />
-      <div className="absolute right-[10%] bottom-[10%] -z-10 h-[250px] w-[250px] rounded-full bg-[#8f8b00]/12 blur-3xl" />
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 space-y-4 text-center">
-          <span className="font-hand text-primary text-xl">
+          <span className="text-[#8f8b00] text-xl">
             Join our clowder
           </span>
-          <h2 className="font-heading text-foreground text-4xl font-bold md:text-5xl">
+          <h2 className="text-foreground text-4xl font-bold md:text-5xl">
             Community Stories
           </h2>
         </div>
@@ -452,7 +449,7 @@ const Community = () => {
                       className="h-14 w-14 rounded-full object-cover"
                     />
                     <div>
-                      <p className="font-heading text-foreground font-bold">
+                      <p className="text-foreground font-bold">
                         {person.name}
                       </p>
                       <p className="text-muted-foreground text-sm">
@@ -480,7 +477,7 @@ const QuoteSection = () => {
       className="relative flex items-center justify-center px-6 py-24 text-center"
     >
       {/* Warm gradient overlay */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-500/10 via-[#8f8b00]/8 to-orange-600/10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-600/10" />
       <motion.div
         className="relative max-w-3xl"
         initial={{ opacity: 0, y: 20 }}
@@ -490,13 +487,13 @@ const QuoteSection = () => {
       >
         <h3
           data-testid="text-quote"
-          className="font-hand text-foreground/80 text-3xl leading-relaxed md:text-5xl"
+          className="text-foreground/80 text-3xl leading-relaxed md:text-5xl"
         >
           Time spent with cats is never wasted. It is a gentle reminder that we
           are here to be loved, and to nap.
         </h3>
 
-        <div className="font-heading text-primary mt-8 font-bold">
+        <div className="text-[#8f8b00] mt-8 font-bold">
           — Sigmund Freud (probably)
         </div>
       </motion.div>
@@ -519,7 +516,7 @@ export const Footer = () => {
           >
             <div className="flex items-center gap-3">
               <PawPrint className="text-primary h-7 w-7" />
-              <h3 className="font-heading text-foreground text-lg font-bold">
+              <h3 className="text-foreground text-lg font-bold">
                 Purrfectly Zen
               </h3>
             </div>
@@ -541,7 +538,7 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="text-primary flex items-center gap-2">
                 <BookOpen className="h-5 w-5" />
-                <span className="font-heading text-sm font-bold">Learn</span>
+                <span className="text-sm font-bold">Learn</span>
               </div>
               <div className="flex flex-col gap-2 pl-7">
                 <a
@@ -565,7 +562,7 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="text-primary flex items-center gap-2">
                 <Users className="h-5 w-5" />
-                <span className="font-heading text-sm font-bold">
+                <span className="text-sm font-bold">
                   Community
                 </span>
               </div>
@@ -591,7 +588,7 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="text-primary flex items-center gap-2">
                 <Lock className="h-5 w-5" />
-                <span className="font-heading text-sm font-bold">Legal</span>
+                <span className="text-sm font-bold">Legal</span>
               </div>
               <div className="flex flex-col gap-2 pl-7">
                 <a
@@ -614,7 +611,7 @@ export const Footer = () => {
             className="flex flex-col justify-center space-y-4"
           >
             <div className="space-y-2">
-              <h4 className="font-heading text-foreground font-bold">
+              <h4 className="text-foreground font-bold">
                 Join Our Community
               </h4>
               <p className="text-muted-foreground text-sm">
@@ -678,7 +675,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-12 space-y-4 text-center"
           >
-            <h2 className="font-heading text-foreground text-4xl font-bold md:text-5xl">
+            <h2 className="text-foreground text-4xl font-bold md:text-5xl">
               Ready to find your zen?
             </h2>
             <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
@@ -728,7 +725,7 @@ export default function Home() {
                 <div className="bg-primary/15 flex h-16 w-16 items-center justify-center rounded-full">
                   {cta.icon}
                 </div>
-                <h3 className="font-heading text-foreground text-2xl font-bold">
+                <h3 className="text-foreground text-2xl font-bold">
                   {cta.title}
                 </h3>
                 <p className="text-muted-foreground flex-1">

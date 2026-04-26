@@ -93,7 +93,7 @@ const ZenApp = () => {
         className="mb-4 flex items-center gap-2"
       >
         <PawPrint className="text-primary h-6 w-6" />
-        <span className="font-heading text-foreground text-xl font-bold">
+        <span className="text-foreground text-xl font-bold">
           Purrfectly Zen
         </span>
       </motion.div>
@@ -121,7 +121,7 @@ const ZenApp = () => {
           <div className="flex flex-col items-center gap-8 p-12">
             {/* Title */}
             <div className="space-y-2 text-center">
-              <h1 className="font-heading text-foreground text-4xl font-bold">
+              <h1 className="text-foreground text-4xl font-bold">
                 Zen Time
               </h1>
               <p className="text-muted-foreground">
@@ -147,10 +147,10 @@ const ZenApp = () => {
                 transition={{ duration: 4 }}
               />
               <div className="relative z-10 text-center">
-                <div className="font-heading text-primary text-5xl font-bold">
+                <div className="text-primary text-5xl font-bold">
                   {formatTime(timeLeft)}
                 </div>
-                <div className="text-muted-foreground font-hand mt-2 text-sm">
+                <div className="text-muted-foreground mt-2 text-sm">
                   {isRunning &&
                     (breathPhase === 'inhale'
                       ? 'Breathe in... notice the calm'
@@ -286,7 +286,7 @@ const ZenApp = () => {
                   className="flex items-center justify-center gap-2"
                 >
                   <Heart className="h-5 w-5 fill-current text-red-400" />
-                  <span className="font-heading text-foreground font-bold">
+                  <span className="text-foreground font-bold">
                     {sessionsCompleted} sessions completed
                   </span>
                 </motion.div>
@@ -323,7 +323,7 @@ const ZenApp = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
-        className="text-muted-foreground font-hand mt-8 text-center text-sm"
+        className="text-muted-foreground mt-8 text-center text-sm"
       >
         Find your zen. One breath at a time. 🐱✨
       </motion.div>
