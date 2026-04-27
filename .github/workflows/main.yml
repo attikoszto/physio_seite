@@ -25,12 +25,14 @@ jobs:
           if [ -z "${{ secrets.SFTP_USER }}" ]; then echo "SFTP_USER is missing"; exit 1; fi
           if [ -z "${{ secrets.SFTP_PASSWORD }}" ]; then echo "SFTP_PASSWORD is missing"; exit 1; fi
           echo "Secrets are set"
-    
+
       - name: Install
         run: npm ci
 
       - name: Build (Astro)
         run: npm run build
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 
       - name: Upload pawequira.de
         uses: pressidium/lftp-mirror-action@v1
